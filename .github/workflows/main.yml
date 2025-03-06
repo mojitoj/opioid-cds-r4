@@ -3,8 +3,7 @@ on: [pull_request]
 jobs:
   build:
     env:
-      NODE_ENV: test
-      DATABASE_URL: postgresql://leap-sls-test:postgres@localhost/leap-sls-test
+        JAVA: java
     name: Test
     runs-on: ubuntu-latest
     services:
