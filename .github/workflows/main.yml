@@ -19,8 +19,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20.x
+      - run: shopt -s expand_aliases && alias JAVA=java
       - run: sh ./_updateCQFTooling-ci.sh
-      - run: JAVA() { java "$@"; } && sh ./_refresh.sh
+      - run: sh ./_refresh.sh
       - run: npm install
       - run: sh ./wait-for-container.sh
       - run: npm test
