@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 20.x
       - run: sh ./_updateCQFTooling-ci.sh
-      - run: shopt -s expand_aliases && alias JAVA=java && sh ./_refresh.sh
+      - run: sh ./_refresh.sh
       - run: npm install
       - run: sh ./wait-for-container.sh
       - run: npm test

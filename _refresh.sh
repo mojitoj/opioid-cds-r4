@@ -21,11 +21,11 @@ fi
 
 echo "$fsoption"
 
-# if ! type "JAVA" > /dev/null; then
-# 	JAVA() { 
-# 		java "$@" 
-# 	}
-# fi
+if ! type "JAVA" > /dev/null; then
+	JAVA() { 
+		java "$@" 
+	}
+fi
 
 tooling=$input_cache_path/$tooling_jar
 if test -f "$tooling"; then
